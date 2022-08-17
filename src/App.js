@@ -30,11 +30,11 @@ const handleClick = ()=>{
    
   return (
     <div className="App">
-      <div>
+      <div className='search-container'>
         <input type="text" onChange={(e) => setSearch(e.target.value)}/>
-        <button onClick={handleClick}>Search</button>
+        <button onClick={handleClick}>Get Images</button>
       </div>
-      <div>
+      <div className='imagebox'>
         {state.map((img,key) =>(
               <Image key={img.id} src={img.urls.thumb}/>
           ))
