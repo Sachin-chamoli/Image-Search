@@ -21,7 +21,7 @@ function App() {
     // },[state]);
 
 const handleClick = ()=>{
-    axios.get(`https://api.unsplash.com/search/photos?page=1&query=${search}&client_id=5a7HhRzDE_-OgckBUytK7NtY4KgeEIutRDQgYLKioeE`)
+    axios.get(`https://api.unsplash.com/search/photos?page=1&query=${search}&per_page=50&client_id=5a7HhRzDE_-OgckBUytK7NtY4KgeEIutRDQgYLKioeE`)
     .then((response)=>{
       console.log(response.data);
       setState(response.data.results);
@@ -36,7 +36,7 @@ const handleClick = ()=>{
       </div>
       <div className='imagebox'>
         {state.map((img,key) =>(
-              <Image key={img.id} src={img.urls.thumb}/>
+              <Image key={img.id} src={img.urls.small}/>
           ))
         }
       </div>

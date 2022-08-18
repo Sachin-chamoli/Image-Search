@@ -4,15 +4,17 @@
     box-sizing: border-box;
 
 }
+
 .App{
     display: flex;
     flex-direction: column;
     align-items:center;
-    border: 2px solid black;
     min-height: 100vh;
+    background-color: black;
+    overflow-x: hidden;
 }
 .search-container{
-    margin: 2rem 0rem;
+    margin: 1.5rem 0rem;
     width: 18rem;
     height: 6rem;
     display: flex;
@@ -23,7 +25,6 @@
 .search-container input{
     height: 2.5rem;
     width: 100%;
-    border: 2px solid black;
     border-radius: 10px;
     font-size: 1.5rem;
     text-align: center;
@@ -36,13 +37,18 @@
     border-radius: 10px;
     font-size: 1.2rem;
     cursor: pointer;
+    background-color: aquamarine;
+}
+.search-container button:hover{
+    box-shadow: 0 0 5px 3px rgba(200, 197, 197, 0.666);
+}
+.search-container button:active{
+    transform: scale(0.97);
 }
 .imagebox{
-    /* border: 2px solid red; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-
-    width: 100vw;
+    padding: 1rem 3rem;
 }
